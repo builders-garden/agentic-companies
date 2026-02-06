@@ -1,0 +1,14 @@
+{
+  "name": "agentic-companies",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @agentic-companies/hr-agent dev & pnpm --filter @agentic-companies/board-engine dev",
+    "build": "pnpm --filter @agentic-companies/types build && pnpm --filter @agentic-companies/db build && pnpm --filter @agentic-companies/hr-agent build && pnpm --filter @agentic-companies/board-engine build && pnpm --filter @agentic-companies/moltbook-skill build",
+    "lint": "pnpm -r lint",
+    "db:generate": "pnpm --filter @agentic-companies/db db:generate",
+    "db:migrate": "pnpm --filter @agentic-companies/db db:migrate"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
